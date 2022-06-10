@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-boxck;
+}
+
+.header {
+    justify-content: center;
+    text-align: center;
+    margin: 50px 50px 50px 50px;
+    padding: 10px;
+}
+
+.container{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    margin: 50px;
+    padding: 10px;
+}
+
+
+.side-bar, .workspace-container {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.grid {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(16, auto); 
+    text-align: center;
+}
+
+.grid-item {
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+}
+
+.blue-ink{
+    background-color: blue;
+}
