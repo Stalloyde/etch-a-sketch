@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <head lang = "en">
     <meta charset = "UTF -8">
-    <title> Etch-a-Sketch</title>
+    <title>Etch-a-Sketch</title>
     <script src = "javascript.js" defer></script>
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-    <div class = "header"> header </div>
-    <div class = "container">
-        <div class = "side-bar"> side bar</div>    
-        <div class = "workspace-container"> sketch space
+    <h1>ETCH-A-SKETCH</h1>
+    <div class = "container"> 
+        
+        <div class = "side-bar">
+            <div class="slide-container">
+                <strong>Grid Size:</strong> <br>
+                <input type="range" min="1" max="100" value="50" class="slider" oninput="this.nextElementSibling.value = this.value"> <output>50</output>
+            </div>    
+            
+            <div class="button-container">
+                <strong>Sketch Colour: </strong> <br>
+                <input type="button" id="black" value="Black">
+                <input type="button" id="random" value="Random"> 
+                <input type="button" id="rgb" value="Color Wheel"> <br>
+                <input type="button" id="eraser" value="Eraser">
+                <input type="button" id="clear" value="Clear">
+            </div>   
+        </div>
+
+        <div class = "workspace-container">
             <div class = "grid"></div>
         </div>
     </div>

@@ -1,8 +1,9 @@
 * {
-    box-sizing: border-boxck;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
 }
 
-.header {
+h1 {
     justify-content: center;
     text-align: center;
     margin: 50px 50px 50px 50px;
@@ -17,14 +18,73 @@
     padding: 10px;
 }
 
+.workspace-container {
+    padding: 30px;
+    border: 1px solid black;
+}
 
-.side-bar, .workspace-container {
+.side-bar {
+    display:flex;
+    flex-direction: column;
     padding: 10px;
     border: 1px solid black;
 }
 
+.slide-container{
+    display:flex;
+    flex-direction: column;
+    margin: 30px;
+    padding: 10px;
+}
+
+.button-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.slider {
+    width: 150px;
+}
+
+output {
+    font-size: large;    
+}
+
+input {
+    margin: 10px;
+    height: 30px;
+    width: 80px;
+    font-size: medium;
+    text-align: center;
+}
+
+input:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#black {
+    background-color: black;
+    color: white;
+}
+
+#random {
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    color: black;
+}
+
+
+#rgb {
+    background-image: linear-gradient(to right, rgb(224, 53, 53),rgb(82, 209, 82),rgb(62, 62, 207));
+    color: white;
+    font-size:12px;
+}
+
 .grid {
-    padding-top: 10px;
+    padding: 10px;
     display: grid;
     grid-template-columns: repeat(16, auto); 
     text-align: center;
@@ -39,5 +99,3 @@
 .sketch-blue {
     background-color: blue;    
 }
-
-
