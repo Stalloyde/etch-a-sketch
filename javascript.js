@@ -9,15 +9,15 @@ function createGrid () {
 
 function togglePen () {
     const gridItem = document.querySelectorAll(".grid-item");
-    gridItem.forEach(item => item.addEventListener("mouse", hover));
+    gridItem.forEach(item => item.addEventListener("mousedown", hover));
 
     function hover () {
+    const gridItem = document.querySelectorAll(".grid-item");
     gridItem.forEach(item => item.addEventListener("mouseover", function ()  {
     this.classList.add("sketch-blue")}));
   }
 }
     
-createGrid ();
+createGrid();
 togglePen();
 //right idea to mousedown = hover, mouseup = stopHover. how to write function for stopHover?
-
