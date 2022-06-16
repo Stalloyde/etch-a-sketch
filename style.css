@@ -21,6 +21,8 @@ h1 {
 .workspace-container {
     padding: 30px;
     border: 1px solid black;
+    width: 800px;
+    height: 700px;
 }
 
 .side-bar {
@@ -45,7 +47,7 @@ h1 {
     margin: 10px;
 }
 
-.slider {
+#slider {
     width: 150px;
 }
 
@@ -86,7 +88,9 @@ input:hover {
 .grid {
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(16, auto); 
+    max-width: 800px;
+    max-height: 700px;
+    grid-template-columns: repeat(auto-fit, 10px); 
     text-align: center;
 }
 
