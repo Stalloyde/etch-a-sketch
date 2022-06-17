@@ -28,6 +28,7 @@ function modifyGrid () {
             div.classList.add("grid-item");
             grid.appendChild(div);
         }
+    togglePen();
     })       
 }
 
