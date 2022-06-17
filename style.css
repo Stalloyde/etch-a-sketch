@@ -90,7 +90,7 @@ input:hover {
     display: grid;
     max-width: 800px;
     max-height: 700px;
-    grid-template-columns: repeat(auto-fit, 10px); 
+    grid-template-columns: repeat(16, 10px); 
     text-align: center;
 }
 
