@@ -1,29 +1,36 @@
 const slider = document.getElementById("slider");
 const output = document.getElementById("output");
+const grid = document.querySelector(".grid");
+
+
 slider.oninput = function getOutputValue () {
-    output.innerHTML = this.value;
-}
+    output.innerHTML = `${this.value} x ${this.value}`;
+    }
 
 function createGrid () {
-    
-    slider.addEventListener("input", function () {
-        calGridSize = output.innerHTML * output.innerHTML;
-
-        for (i = 1; i <= calGridSize; i ++) {
-        const oldDiv = document.createElement("div");
-        oldDiv.classList.add("grid-item");
-        const oldGrid = document.querySelector(".grid");
-        oldGrid.appendChild(oldDiv);
-        
-        const newDiv = document.createElement("span");
-        newDiv.classList.add("grid-item");
-        oldGrid.appendChild(newDiv);        
-        }
-    })
+    for (i = 1; i <= 256; i++) {
+        const div = document.createElement("div")
+        div.classList.add("grid-item");
+        grid.appendChild(div);
+    }
 }
 
-//check if div grid is empty. if empty, appendchild. if not empty, replace child.
-//now the problem is the appendChild. the value of each slide input is staacking onto each other.
+function modifyGrid () {
+    slider.addEventListener("input", function () {
+        const calGridSize = this.value * this.value;
+        
+        while (grid.firstChild) {
+            grid.removeChild(grid.lastChild);
+        }
+
+        for (i = 1; i <= calGridSize; i++) {
+            const div = document.createElement("div");
+            div.classList.add("grid-item");
+            grid.appendChild(div);
+        }
+    })       
+}
+
 function togglePen () {
     const gridItem = document.querySelectorAll(".grid-item");
     gridItem.forEach(item => item.addEventListener("mousedown", hover));
@@ -37,6 +44,7 @@ function togglePen () {
 
 createGrid();
 togglePen();
+modifyGrid();
 
 // assign value of range to variable getGridSize
 // variable calGridSize
