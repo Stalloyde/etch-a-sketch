@@ -1,7 +1,6 @@
 const slider = document.getElementById("slider");
 const output = document.getElementById("output");
-const grid = document.querySelector(".grid");
-
+const grid = document.querySelector(".grid-container");
 
 slider.oninput = function getOutputValue () {
     output.innerHTML = `${this.value} x ${this.value}`;
@@ -24,9 +23,11 @@ function modifyGrid () {
         }
 
         for (i = 1; i <= calGridSize; i++) {
+            const sqRoot = Math.sqrt(calGridSize);
             const div = document.createElement("div");
             div.classList.add("grid-item");
             grid.appendChild(div);
+            grid.style.setProperty("grid-template-columns", "repeat(" + sqRoot + ", 1fr)");
         }
     togglePen();
     })       
@@ -37,7 +38,6 @@ function togglePen () {
     gridItem.forEach(item => item.addEventListener("mousedown", hover));
 
     function hover () {
-    const gridItem = document.querySelectorAll(".grid-item");
     gridItem.forEach(item => item.addEventListener("mouseover", function ()  {
     this.classList.add("sketch-blue")}));
   }
@@ -46,12 +46,3 @@ function togglePen () {
 createGrid();
 togglePen();
 modifyGrid();
-
-// assign value of range to variable getGridSize
-// variable calGridSize
-// i <= calGridSize
-
-// use slider
-// slider returns a value.... slider.oninput 
-// detect value... this.value
-// use value for grid calculation

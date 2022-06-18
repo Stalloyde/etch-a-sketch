@@ -85,18 +85,19 @@ input:hover {
     font-size:12px;
 }
 
-.grid {
-    padding: 10px;
+.grid-container {
     display: grid;
-    max-width: 800px;
-    max-height: 700px;
-    grid-template-columns: repeat(16, 10px); 
-    text-align: center;
+    grid-template-columns: repeat(16, 1fr);
+    height: 640px;
+    width: 730px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
 }
 
 .grid-item {
-    height: 30px;
-    width: 30px;
+    height: 100%;
+    width: 100%;
     border: 1px solid black;
 }
 
