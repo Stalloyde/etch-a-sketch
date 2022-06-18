@@ -101,6 +101,9 @@ input:hover {
     border: 1px solid black;
 }
 
+.grid-item:hover {
+    cursor: crosshair;
+}
 .sketch-blue {
     background-color: blue;    
 }
