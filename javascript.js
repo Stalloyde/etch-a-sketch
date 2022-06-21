@@ -6,6 +6,7 @@ const randomBtn = document.getElementById("random");
 const shadeBtn = document.getElementById("shade");
 const eraserBtn = document.getElementById("eraser");
 const clearBtn = document.getElementById("clear");
+const colorPickerBtn = document.getElementById("color-picker");
 
 slider.oninput = function getOutputValue () {
     output.innerHTML = `${this.value} x ${this.value}`;
@@ -33,6 +34,13 @@ randomBtn.addEventListener("click", function () {
     const gridItem = document.querySelectorAll(".grid-item");
     gridItem.forEach(item => item.addEventListener("mouseover", function () {   
         this.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+    }));
+})
+
+colorPickerBtn.addEventListener("click", function () {
+    const gridItem = document.querySelectorAll(".grid-item");
+    gridItem.forEach(item => item.addEventListener("mouseover", function () {   
+        this.style.backgroundColor = colorPickerBtn.value;
     }));
 })
 
