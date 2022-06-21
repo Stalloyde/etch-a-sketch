@@ -8,21 +8,25 @@ const eraserBtn = document.getElementById("eraser");
 const clearBtn = document.getElementById("clear");
 const colorPickerBtn = document.getElementById("color-picker");
 
+//display slider value
 slider.oninput = function getOutputValue () {
     output.innerHTML = `${this.value} x ${this.value}`;
     }
 
+//create default grid
 for (i = 1; i <= 256; i++) {
     const div = document.createElement("div")
     div.classList.add("grid-item");
     grid.appendChild(div);
 }      
 
+//default sketch
 const gridItem = document.querySelectorAll(".grid-item");
 gridItem.forEach(item => item.addEventListener("mouseover", function () {
     this.style.backgroundColor = "black";
 }))
 
+//all buttons
 blackBtn.addEventListener("click", function () {
     const gridItem = document.querySelectorAll(".grid-item");
     gridItem.forEach(item => item.addEventListener("mouseover", function () {             
@@ -56,6 +60,7 @@ clearBtn.addEventListener("click", function () {
     gridItem.forEach(item => item.style.backgroundColor = "");
 })
 
+//modify grid size
 slider.addEventListener("input", function () {
 const calGridSize = this.value * this.value;
 
