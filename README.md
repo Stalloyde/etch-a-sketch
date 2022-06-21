@@ -7,3 +7,4 @@
 4) How to retrieve value of a slider and use said value to implement a dynamic grid size modifier
 5) How to get random color
 6) Deeper understanding of querySelector, querySelectorAll, addEventListener.
+    - how to write functions to be passed into addEventListeners

@@ -6,7 +6,7 @@
 h1 {
     justify-content: center;
     text-align: center;
-    margin: 50px 20px 20px 20px;
+    margin: 30px 20px 20px 20px;
     padding: 10px;
 }
 
@@ -87,10 +87,9 @@ input:hover {
 }
 
 
-#rgb {
-    background-image: linear-gradient(to right, rgb(224, 53, 53),rgb(82, 209, 82),rgb(62, 62, 207));
+#shade {
+    background-image: linear-gradient(to right, rgb(138, 138, 138),rgb(63, 63, 63),rgb(7, 7, 7));
     color: white;
-    font-size:12px;
 }
 
 .grid-container {
