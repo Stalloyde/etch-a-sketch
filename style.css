@@ -103,6 +103,7 @@ input:hover {
 .grid-item {
     height: 100%;
     width: 100%;
+    border: 1px solid black;
 }
 
 .grid-item:hover {
